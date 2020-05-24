@@ -1,3 +1,9 @@
+# Create navbar
+set navbar.component.html to show nav with the following drop down
+- {user's email}
+  - my preferences
+  - log out
+
 # Create navigation module and set app.component.html
 
 - create navigation module
