@@ -1,5 +1,14 @@
+# Create sidnav
+
+set sidenav.component.html to nav items
+
+- on sidenav.component.ts add a nav items array
+- iterate through the array on sidenav.component.html to show all nav items
+
 # Create navbar
+
 set navbar.component.html to show nav with the following drop down
+
 - {user's email}
   - my preferences
   - log out
