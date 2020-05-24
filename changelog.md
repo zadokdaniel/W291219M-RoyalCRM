@@ -1,3 +1,13 @@
+# Create navigation module and set app.component.html
+
+- create navigation module
+  - ng g m modules/navigation
+- create sidenav and navbar
+  - ng g c modules/navigation/navbar
+  - ng g c modules/navigation/sidenav
+- export sidenav and navbar from navigation module
+- use components on app.component.html
+
 # Add installed packages to angular.json
 
 Add to styles and scripts array the installed packages
