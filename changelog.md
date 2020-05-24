@@ -1,3 +1,28 @@
+# Add installed packages to angular.json
+
+Add to styles and scripts array the installed packages
+
+- styles:
+
+```javascript
+"styles": [
+  "src/styles.scss",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+]
+```
+
+- scripts:
+
+```javascript
+"scripts": [
+  "node_modules/jquery/dist/jquery.min.js",
+  "node_modules/popper.js/dist/umd/popper.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js",
+  "node_modules/@fortawesome/fontawesome-free/js/all.js"
+]
+```
+
 # Install style dependencies
 
 Install Bootstrap, JQuery, Popper.js and @fortawesome/fontawesome-free
