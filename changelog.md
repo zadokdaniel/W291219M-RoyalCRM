@@ -1,3 +1,10 @@
+# Create a contact API service and contact interface
+
+Create a contact API service with mock-data and an interface to configure it's type.
+
+- services/contacts
+- interfaces/contact
+
 # Create components/contacts component template
 
 Create a template for contacts page in components/contacts
