@@ -7,7 +7,9 @@ import { Component, Input } from '@angular/core';
       <div class="col-12">
         <div class="jumbotron pt-3 pb-3">
           <h3><i [ngClass]="icon"></i> {{ title | titlecase }}</h3>
-          <p class="lead">{{ description }}</p>
+          <p class="lead">
+            {{ description | paragraphCapital }}
+          </p>
         </div>
       </div>
     </div>

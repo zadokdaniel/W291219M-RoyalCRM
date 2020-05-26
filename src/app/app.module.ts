@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageHeaderComponent } from './utils/page-header/page-header.component';
+import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PageHeaderComponent } from './utils/page-header/page-header.component';
     SidenavComponent,
     NavbarComponent,
     PageHeaderComponent,
+    ParagraphCapitalPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

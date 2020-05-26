@@ -1,3 +1,8 @@
+# Create pipes/paragraph-capital.pipe.ts
+
+Create a pipe which will capital the first letter and trim spaces. 
+Use it on utils/page-header.component.html for the description value.
+
 # Create utils/page-header component
 
 Create the page-header component under folder named utils.
