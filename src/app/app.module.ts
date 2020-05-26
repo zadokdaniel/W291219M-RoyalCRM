@@ -7,6 +7,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageHeaderComponent } from './utils/page-header/page-header.component';
 import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
     NavbarComponent,
     PageHeaderComponent,
     ParagraphCapitalPipe,
+    ContactsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

@@ -1,6 +1,10 @@
+# Create components/contacts component template
+
+Create a template for contacts page in components/contacts
+
 # Create pipes/paragraph-capital.pipe.ts
 
-Create a pipe which will capital the first letter and trim spaces. 
+Create a pipe which will capital the first letter and trim spaces.
 Use it on utils/page-header.component.html for the description value.
 
 # Create utils/page-header component

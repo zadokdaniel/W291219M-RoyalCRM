@@ -1,0 +1,46 @@
+<app-page-header
+  title="contacts"
+  description="company employees details"
+  icon="fas fa-users"
+></app-page-header>
+
+<div class="row mt-3">
+  <div class="col-12">
+    <h4>{{ "company employees contacts table" | titlecase }}</h4>
+
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Birthday</th>
+          <th>Phones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Shalom Cohen</td>
+          <td>scohen@gmail.com</td>
+          <td>25/08/2025</td>
+          <td>
+            <ul>
+              <li>0000000001</li>
+              <li>0000000002</li>
+              <li>0000000003</li>
+            </ul>
+
+            <ng-template #noPhones>
+              <p><i>No phones...</i></p>
+            </ng-template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #noContacts>
+      <p><i>Users are not found...</i></p>
+    </ng-template>
+  </div>
+</div>
