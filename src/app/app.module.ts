@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PageHeaderComponent } from './utils/page-header/page-header.component';
 import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     PageHeaderComponent,
     ParagraphCapitalPipe,
     ContactsComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

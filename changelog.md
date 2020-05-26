@@ -1,3 +1,9 @@
+# Create Page-Not-Found component
+
+Create a page not found (404) component
+
+- components/page-not-found
+
 # Connect contacts.service to contacts.component.html template
 
 Connect the services/contacts.service.ts to the template created on last step (components/contacts/contacts.component.html)
