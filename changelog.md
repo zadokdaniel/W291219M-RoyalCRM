@@ -1,3 +1,9 @@
+# Configure routing for app
+
+- configure routes on app-routing.module.ts
+- add `<route-outlet>` tag where components should appear
+- use `[routerLink]` directive for links
+
 # Create customers component
 
 Create a customers page component
