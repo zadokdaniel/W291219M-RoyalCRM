@@ -1,3 +1,8 @@
+# Create utils/page-header component
+
+Create the page-header component under folder named utils.
+This component will be used for every page on top of it.
+
 # Refactor all to app.module
 
 Extract sidnav.component and navbar.component to app.module.

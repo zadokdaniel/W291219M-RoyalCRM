@@ -8,7 +8,12 @@
       <div class="col-2 pl-0">
         <app-sidenav></app-sidenav>
       </div>
-      <div class="col-10">CONTENT</div>
+      <div class="col-10">
+        <app-page-header
+          [title]="'Title'"
+          [description]="'some description'"
+        ></app-page-header>
+      </div>
     </div>
   </div>
 </main>
