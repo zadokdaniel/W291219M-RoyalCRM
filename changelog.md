@@ -1,3 +1,9 @@
+# Create customers component
+
+Create a customers page component
+
+- components/customers
+
 # Create Page-Not-Found component
 
 Create a page not found (404) component
