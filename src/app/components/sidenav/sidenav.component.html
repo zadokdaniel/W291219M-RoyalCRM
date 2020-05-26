@@ -2,7 +2,7 @@
   <li *ngFor="let item of navItems">
     <a href="#" class="nav-link text-white">
       <i [ngClass]="item.icon"></i>
-      <span class="ml-3">{{ item.title }}</span>
+      <span class="ml-3">{{ item.title | titlecase }}</span>
     </a>
   </li>
 </ul>

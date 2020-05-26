@@ -1,3 +1,8 @@
+# Refactor all to app.module
+
+Extract sidnav.component and navbar.component to app.module.
+Add title pipe to sidenav.component.html links.
+
 # Create sidnav
 
 set sidenav.component.html to nav items
