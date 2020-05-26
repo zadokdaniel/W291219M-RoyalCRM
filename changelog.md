@@ -1,3 +1,7 @@
+# Connect contacts.service to contacts.component.html template
+
+Connect the services/contacts.service.ts to the template created on last step (components/contacts/contacts.component.html)
+
 # Create a contact API service and contact interface
 
 Create a contact API service with mock-data and an interface to configure it's type.

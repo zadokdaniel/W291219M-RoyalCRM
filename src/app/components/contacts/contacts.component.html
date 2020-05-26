@@ -8,7 +8,10 @@
   <div class="col-12">
     <h4>{{ "company employees contacts table" | titlecase }}</h4>
 
-    <table class="table table-bordered mt-3">
+    <table
+      *ngIf="contacts.length; else noContacts"
+      class="table table-bordered mt-3"
+    >
       <thead>
         <tr>
           <th>No.</th>
@@ -19,16 +22,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Shalom Cohen</td>
-          <td>scohen@gmail.com</td>
-          <td>25/08/2025</td>
+        <tr *ngFor="let contact of contacts; index as idx">
+          <td>{{ idx + 1 }}</td>
+          <td>{{ contact.name | titlecase }}</td>
+          <td>{{ contact.email | lowercase }}</td>
+          <td>{{ contact.birthday | date: "dd/MM/yyyy" }}</td>
           <td>
-            <ul>
-              <li>0000000001</li>
-              <li>0000000002</li>
-              <li>0000000003</li>
+            <ul *ngIf="contact.phones?.length; else noPhones">
+              <li *ngFor="let phone of contact.phones">{{ phone }}</li>
             </ul>
 
             <ng-template #noPhones>
