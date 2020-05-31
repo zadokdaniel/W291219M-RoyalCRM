@@ -1,3 +1,7 @@
+# Add create new button to customers page
+
+Add button to components/customers with route to "customers/new"
+
 # Aside: create HTTP requests
 
 Practice HTTP requests using Observable objects and "async" pipe
