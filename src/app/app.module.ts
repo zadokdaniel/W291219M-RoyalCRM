@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { ParagraphCapitalPipe } from './pipes/paragraph-capital.pipe';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { HttpTut } from './components/http-tut/http-tut.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,9 @@ import { CustomersComponent } from './components/customers/customers.component';
     ContactsComponent,
     PageNotFoundComponent,
     CustomersComponent,
+    HttpTut,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

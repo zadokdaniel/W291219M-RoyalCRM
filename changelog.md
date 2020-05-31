@@ -1,3 +1,11 @@
+# Aside: create HTTP requests
+
+Practice HTTP requests using Observable objects and "async" pipe
+
+- see the following components
+  - components/http-tut
+  - services/http.service.ts
+
 # Configure active route to pop
 
 Add to "routerLink" element the "routerLinkActive" directive, so current route link will pop.

@@ -1,0 +1,32 @@
+<!-- <div *ngIf="post; else loading">
+  <pre>
+    
+    {{ post | json }}
+    
+    </pre
+  >
+</div>
+
+<ng-template #loading>
+  loading....
+</ng-template> -->
+<div *ngIf="httpService.posts | async as post; else loading">
+  <pre>
+    
+    {{ post[0] | json }}
+    
+  </pre>
+</div>
+
+<ng-template #loading>
+  loading....
+</ng-template>
+
+<!-- {{ (httpService.posts | async)[0] | json }} -->
+
+<hr />
+<hr />
+
+<input #num type="number" />
+<button (click)="onSubmit(num)">Submit</button>
+{{ post | async | json }}
