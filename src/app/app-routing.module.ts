@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { CustomersComponent } from './components/customers/customers.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { NewCustomerComponent } from './components/new-customer/new-customer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'contacts', pathMatch: 'full' },
   { path: 'customers', component: CustomersComponent },
+  { path: 'customers/new', component: NewCustomerComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'page-not-found', pathMatch: 'full' },

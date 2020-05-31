@@ -12,6 +12,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { HttpTut } from './components/http-tut/http-tut.component';
+import { NewCustomerComponent } from './components/new-customer/new-customer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpTut } from './components/http-tut/http-tut.component';
     PageNotFoundComponent,
     CustomersComponent,
     HttpTut,
+    NewCustomerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

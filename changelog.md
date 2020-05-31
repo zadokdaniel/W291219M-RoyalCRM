@@ -1,3 +1,8 @@
+# Add customers/new route and component
+
+- create "components/new-customer" component.
+- connect component to "/customers/new" route
+
 # Add create new button to customers page
 
 Add button to components/customers with route to "customers/new"
