@@ -1,3 +1,7 @@
+# Configure active route to pop
+
+Add to "routerLink" element the "routerLinkActive" directive, so current route link will pop.
+
 # Configure routing for app
 
 - configure routes on app-routing.module.ts
