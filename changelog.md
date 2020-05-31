@@ -1,3 +1,28 @@
+# Upload app to firebase hosting service
+
+Upload your SPA Angular app to firebase hosting service.
+[Review Current Project](https://w291219m-royalcrm.web.app/)
+
+- `npm i -g firebase-tools`
+  - install firebase tools package globally
+- `firebase login`
+  - login into the firebase account holding the project
+- `cd` to angular project
+- `firebase init`
+  - initialize project's settings
+  - select hosting service
+  - select the correct project to upload to (_Warning: selecting the wrong project may cause an overwrite_)
+  - enter the public directory (`angular.json` -> `architect.build.options.outputPath`)
+  - select `Yes` when asked
+    > `Configure as a single-page app (rewrite all urls to /index.html)?`
+  - select `No` when asked
+    > `File dist/{project name}/index.html already exists. Overwrite?`
+- ng build --prod
+  - build the angular project with production configurations
+- firebase deploy
+  - deploy angular app to firebase hosting service
+  - click the provided link to view your online site or dashboard
+
 # Add customers/new route and component
 
 - create "components/new-customer" component.
