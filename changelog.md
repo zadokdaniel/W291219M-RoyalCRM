@@ -1,3 +1,9 @@
+# Create deploy script in package.json
+
+Create in package.json a deploy script which will build and deploy project
+
+- `"deploy": "ng build --prod && firebase deploy --only hosting"`
+
 # Create new customer form
 
 Create a form for new customer and validations.
