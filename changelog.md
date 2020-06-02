@@ -1,3 +1,12 @@
+# Create new customer form
+
+Create a form for new customer and validations.
+
+- create a form in `components/new-customer`
+  - make validations
+  - use `interfaces/customer`
+- create interface for customer `interfaces/customer`
+
 # Upload app to firebase hosting service
 
 Upload your SPA Angular app to firebase hosting service.
