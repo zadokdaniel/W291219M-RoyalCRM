@@ -1,0 +1,48 @@
+<pre>
+
+  {{ message | json }}
+</pre>
+
+<form #tutForm="ngForm" (ngSubmit)="onSubmit(tutForm)">
+  <label for="id">Document ID</label>
+  <input type="text" [(ngModel)]="form.idValue" name="idValue" id="id" />
+
+  <br />
+
+  <label for="document">Document</label>
+  <textarea [(ngModel)]="form.object" name="object" id="" cols="80" rows="10">
+  </textarea>
+
+  <br />
+
+  <button (click)="initialize()">Initialize</button>
+  <button (click)="onAdd()">add</button>
+  <button (click)="onUpdate()">update</button>
+  <button (click)="onSet()">set</button>
+  <button (click)="onDelete()">delete</button>
+  <button (click)="onReset(tutForm)">reset form</button>
+</form>
+
+<br />
+
+<details>
+  <summary>
+    snapshot
+  </summary>
+
+  <pre>
+    <!-- {{ snapshot | async | json }} -->
+  </pre>
+</details>
+<details>
+  <summary>
+    valueChanges
+  </summary>
+  {{ valueChanges | async | json }}
+</details>
+<details>
+  <summary>
+    valueChanges with ID
+  </summary>
+  {{ valueChangesWithId | async | json }}
+</details>

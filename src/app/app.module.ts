@@ -19,6 +19,7 @@ import { HttpTut } from './components/http-tut/http-tut.component';
 import { NewCustomerComponent } from './components/new-customer/new-customer.component';
 
 import { environment } from '../environments/environment';
+import { FirebaseTutComponent } from './components/firebase-tut/firebase-tut.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { environment } from '../environments/environment';
     CustomersComponent,
     HttpTut,
     NewCustomerComponent,
+    FirebaseTutComponent,
   ],
   imports: [
     BrowserModule,

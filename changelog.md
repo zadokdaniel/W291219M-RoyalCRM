@@ -1,3 +1,11 @@
+# Aside: work with FireStore service
+
+Practice firestore api using Observable objects and "async" pipe
+
+- see the following components
+  - components/firebase-tut
+  - services/firebase-tut.service.ts
+
 # Connect app to firebase services
 
 Connect angular app to firebase services.
