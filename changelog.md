@@ -1,3 +1,12 @@
+# Finish Customers and New-Customer components
+
+Make `new-customer` component return to `customers` page on save, and add customers table
+
+- use `router` service to change navigation on save
+- create customers table on `components/customers`
+- create component and make route `components/customer-details` on `/customers/:id`
+- create component and make route `components/customer-edit` on `/customers/:id/edit`
+
 # Aside: work with FireStore service
 
 Practice firestore api using Observable objects and "async" pipe

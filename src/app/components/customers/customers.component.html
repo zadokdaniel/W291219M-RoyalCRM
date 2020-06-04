@@ -15,4 +15,56 @@
   </div>
 </div>
 
-<app-firebase-tut></app-firebase-tut>
+<div class="row mt-3">
+  <div class="col-12">
+    <div *ngIf="customersObservable | async as customers; else loading">
+      <table
+        *ngIf="customers.length; else noCustomers"
+        class="table table-bordered"
+      >
+        <thead>
+          <tr>
+            <th>#No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of customers; index as idx">
+            <td>
+              {{ idx + 1 }}
+              <a [routerLink]="['/customers', customer.id, 'edit']" class="ml-3"
+                ><i class="fas fa-pen"></i
+              ></a>
+              <a href="#" class="ml-3" (click)="remove(customer.id)"
+                ><i class="fas fa-trash-alt"></i
+              ></a>
+            </td>
+            <td>
+              <a [routerLink]="['/customers', customer.id]">{{
+                customer.firstName
+              }}</a>
+            </td>
+            <td>{{ customer.lastName }}</td>
+            <td>
+              <a [href]="'mailto:' + customer.email">{{ customer.email }}</a>
+            </td>
+            <td>
+              <a [href]="'tel:' + customer.phone">{{ customer.phone }}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <ng-template #noCustomers>
+        <p><i>No customers...</i></p>
+      </ng-template>
+    </div>
+
+    <ng-template #loading>
+      loading...
+    </ng-template>
+  </div>
+</div>

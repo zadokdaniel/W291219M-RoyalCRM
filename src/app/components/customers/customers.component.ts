@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomersService } from '../../services/customers.service';
+import { Observable } from 'rxjs';
+import { Customer } from 'src/app/interfaces/customer';
 
 @Component({
   selector: 'app-customers',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
   providers: [],
 })
 export class CustomersComponent implements OnInit {
-  constructor() {}
+  customersObservable: Observable<Customer[]>;
+
+  constructor(private customersService: CustomersService) {
+    this.customersObservable = this.customersService.getAll();
+  }
+
+  remove(id: string) {
+    this.customersService.remove(id);
+  }
 
   ngOnInit(): void {}
 }
