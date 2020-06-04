@@ -1,3 +1,26 @@
+# Connect app to firebase services
+
+Connect angular app to firebase services.
+
+> use `ng add @angular/fire` for angular schematics
+
+- install packages
+  - `npm i firebase @angular/fire`
+- add configurations to environment
+  - add `firebaseConfig` object to `src/environments/environment.prod.ts` and `src/environments/environment.ts`
+- import `@angular/fire` modules and initialize with `firebaseConfig` from `src/environments/environment.ts` module
+  - `import { AngularFireModule } from '@angular/fire';`
+  - `import { AngularFirestoreModule } from '@angular/fire/firestore';`
+  - `import { AngularFireAuthModule } from '@angular/fire/auth';`
+  - `import { environment } from '../environments/environment';`
+  - ```javascript
+    imports: [
+      AngularFireModule.initializeApp(environment.firebaseConfig),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+    ];
+    ```
+
 # Create deploy script in package.json
 
 Create in package.json a deploy script which will build and deploy project

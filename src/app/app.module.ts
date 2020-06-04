@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { CustomersComponent } from './components/customers/customers.component';
 import { HttpTut } from './components/http-tut/http-tut.component';
 import { NewCustomerComponent } from './components/new-customer/new-customer.component';
+
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,15 @@ import { NewCustomerComponent } from './components/new-customer/new-customer.com
     HttpTut,
     NewCustomerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
