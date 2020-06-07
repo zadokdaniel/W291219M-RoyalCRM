@@ -1,3 +1,7 @@
+# Finish customer-detail.component
+
+Finish the customer-detail.component to show customer's details
+
 # Refactor customer.service
 
 refactor customer.service for better performance

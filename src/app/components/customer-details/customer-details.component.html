@@ -1,1 +1,56 @@
-<p>customer-details works!</p>
+<app-page-header
+  title="Review Customer"
+  description="review customer's details"
+  icon="fa fa-user"
+>
+</app-page-header>
+
+<div *ngIf="customer$ | async as customer; else noCustomer">
+  <div class="row">
+    <div class="col-12">
+      <p>
+        <a class="btn btn-secondary" routerLink="/customers">
+          <i class="fas fa-arrow-alt-circle-left"></i>
+          Back
+        </a>
+      </p>
+
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td><b>First Name:</b></td>
+            <td>{{ customer.firstName }}</td>
+          </tr>
+          <tr>
+            <td><b>Last Name:</b></td>
+            <td>{{ customer.lastName }}</td>
+          </tr>
+          <tr>
+            <td><b>Email:</b></td>
+            <td>
+              <a [href]="'mailto:' + customer.email"> {{ customer.email }}</a>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Phone:</b></td>
+            <td>
+              <a [href]="'tel:' + customer.phone"> {{ customer.phone }}</a>
+            </td>
+          </tr>
+          <tr>
+            <td><b>Address:</b></td>
+            <td>{{ customer.address }}</td>
+          </tr>
+          <tr>
+            <td><b>Notes:</b></td>
+            <td>{{ customer.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<ng-template #noCustomer>
+  <p><i>no such customer dummy!</i></p>
+</ng-template>

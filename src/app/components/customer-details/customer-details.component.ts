@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { tap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
+import { CustomersService } from 'src/app/services/customers.service';
+import { Observable } from 'rxjs';
+import { Customer } from 'src/app/interfaces/customer';
 
 @Component({
   selector: 'app-customer-details',
@@ -8,16 +11,17 @@ import { tap } from 'rxjs/operators';
   styleUrls: ['./customer-details.component.scss'],
 })
 export class CustomerDetailsComponent implements OnInit {
-  idParam = '';
+  customer$: Observable<Customer> = null;
 
-  constructor(private activatedRouteService: ActivatedRoute) {}
+  constructor(
+    private activatedRouteService: ActivatedRoute,
+    private customerService: CustomersService
+  ) {}
 
   ngOnInit(): void {
-    this.activatedRouteService.params
-      .pipe(tap(console.log))
-      .subscribe((params) => (this.idParam = params?.id));
-
-    // const id = this.activatedRouteService.snapshot.params.id;
-    // console.log(id);
+    // Get params observable - async
+    this.customer$ = this.activatedRouteService.params.pipe(
+      switchMap((params) => this.customerService.getById(params.id))
+    );
   }
 }
