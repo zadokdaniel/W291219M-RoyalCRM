@@ -1,3 +1,7 @@
+# Finish customer-edit.component
+
+Complete customer edit page functionality
+
 # Finish customer-detail.component
 
 Finish the customer-detail.component to show customer's details

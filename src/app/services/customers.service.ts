@@ -47,4 +47,8 @@ export class CustomersService {
         })
       );
   }
+
+  update(id: string, value: Customer) {
+    return this.customersRef.doc(id).update(value);
+  }
 }
