@@ -1,3 +1,7 @@
+# Refactor customer.service
+
+refactor customer.service for better performance
+
 # Finish Customers and New-Customer components
 
 Make `new-customer` component return to `customers` page on save, and add customers table
