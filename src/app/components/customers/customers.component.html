@@ -5,7 +5,16 @@
 ></app-page-header>
 
 <div class="row">
-  <div class="col-12">
+  <div class="col-8">
+    <input
+      [(ngModel)]="term"
+      type="search"
+      name="term"
+      class="form-control"
+      placeholder="Search customer by phone"
+    />
+  </div>
+  <div class="col-4">
     <span class="float-right">
       <a routerLink="/customers/new" class="btn btn-primary">
         <i class="fas fa-plus-circle"></i>
@@ -32,13 +41,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let customer of customers; index as idx">
+          <tr
+            *ngFor="
+              let customer of customers | filterArray: 'phone':term;
+              index as idx
+            "
+          >
             <td>
               {{ idx + 1 }}
               <a [routerLink]="['/customers', customer.id, 'edit']" class="ml-3"
                 ><i class="fas fa-pen"></i
               ></a>
-              <a href="#" class="ml-3" (click)="remove(customer.id)"
+              <a href="" class="ml-3" (click)="remove(customer.id, $event)"
                 ><i class="fas fa-trash-alt"></i
               ></a>
             </td>

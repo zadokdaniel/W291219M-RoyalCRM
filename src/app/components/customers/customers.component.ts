@@ -12,12 +12,18 @@ import { Customer } from 'src/app/interfaces/customer';
 export class CustomersComponent implements OnInit {
   customersObservable: Observable<Customer[]>;
 
+  term = '';
+
   constructor(private customersService: CustomersService) {
     this.customersObservable = this.customersService.getAll();
   }
 
-  remove(id: string) {
-    this.customersService.remove(id);
+  remove(id: string, e: MouseEvent) {
+    e.preventDefault();
+
+    if (confirm('Are you sure you want to delete?')) {
+      this.customersService.remove(id);
+    }
   }
 
   ngOnInit(): void {}

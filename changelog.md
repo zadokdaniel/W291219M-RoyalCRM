@@ -1,3 +1,10 @@
+# Add customers search box
+
+Add search box to customers page using pipes.
+
+- create `filterArray` pipe
+- integrate with a `input:search` box
+
 # Finish customer-edit.component
 
 Complete customer edit page functionality

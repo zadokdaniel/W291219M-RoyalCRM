@@ -15,7 +15,9 @@ export class CustomersService {
   customers$: Observable<Customer[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.customersRef = this.afs.collection('customer');
+    this.customersRef = this.afs.collection('customer', (ref) =>
+      ref.orderBy('firstName', 'asc')
+    );
 
     this.customers$ = this.customersRef
       .valueChanges({ idField: 'id' })
