@@ -1,17 +1,79 @@
-<button (click)="authService.loginWithEmail('shalom@google.com', '123456')">
-  login
-</button>
-<button (click)="authService.loginWithGoogle()">google login</button>
-<button (click)="authService.logout()">logout</button>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-4">
+    <form
+      #loginForm="ngForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+      autocomplete="off"
+    >
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 font-weight-normal">
+          COMPANY <i class="fas fa-angle-double-up text-success"></i>CRM
+        </h1>
+        <p>Login with your account</p>
+      </div>
 
-<h1>User Observable</h1>
-<pre>
-    {{ authService.user$ | async | json }}
-</pre>
-<h1>User</h1>
-<pre>
-    {{ authService.user | json }}
-</pre>
+      <div class="form-group mb-4">
+        <div class="form-group">
+          <input
+            #emailF="ngModel"
+            [(ngModel)]="form.email"
+            name="email"
+            required
+            email
+            [ngClass]="{ 'is-invalid': emailF.errors && emailF.touched }"
+            type="email"
+            placeholder="john@doe.com"
+            id="email"
+            class="form-control"
+            autocomplete="username"
+          />
+          <div
+            [hidden]="!(emailF.errors?.required || emailF.errors?.email)"
+            class="invalid-feedback"
+          >
+            Valid email is required
+          </div>
+        </div>
+      </div>
 
-<h1>isLogged</h1>
-isLogged {{ authService.isLogged }}
+      <div class="form-group mb-4">
+        <div class="form-group">
+          <input
+            #passwordF="ngModel"
+            [(ngModel)]="form.password"
+            name="password"
+            required
+            [ngClass]="{ 'is-invalid': passwordF.errors && passwordF.touched }"
+            type="password"
+            id="password"
+            class="form-control"
+            autocomplete="current-password"
+          />
+          <div [hidden]="!passwordF.errors?.required" class="invalid-feedback">
+            Password is required
+          </div>
+        </div>
+      </div>
+
+      <button
+        [disabled]="!loginForm.form.valid"
+        class="btn btn-lg btn-primary btn-block"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+
+    <hr />
+
+    <button appLoginGoogle class="btn btn-lg btn-primary btn-block">
+      Log in with Google
+    </button>
+
+    <p class="mt-5 mb-3 text-muted text-center">&copy; 2019-2020</p>
+  </div>
+</div>
+
+

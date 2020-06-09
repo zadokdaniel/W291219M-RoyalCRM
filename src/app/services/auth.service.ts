@@ -14,11 +14,12 @@ export class AuthService {
   isLogged: boolean = false;
 
   constructor(private afa: AngularFireAuth) {
-    this.user$ = this.afa.authState.pipe(
-      tap((user) => (this.user = user)),
-      tap((user) => (this.isLogged = Boolean(user))),
-      shareReplay(1)
-    );
+    this.user$ = this.afa.authState.pipe(shareReplay(1));
+
+    this.user$.subscribe((user) => {
+      this.user = user;
+      this.isLogged = Boolean(user);
+    });
   }
 
   createUser(email: string, password: string) {

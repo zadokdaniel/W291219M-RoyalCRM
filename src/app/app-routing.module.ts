@@ -7,16 +7,42 @@ import { NewCustomerComponent } from './components/new-customer/new-customer.com
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'customers', component: CustomersComponent },
-  { path: 'customers/new', component: NewCustomerComponent },
-  { path: 'customers/:id', component: CustomerDetailsComponent },
-  { path: 'customers/:id/edit', component: CustomerEditComponent },
-  { path: 'contacts', component: ContactsComponent },
-  { path: 'page-not-found', component: PageNotFoundComponent },
-  { path: '**', redirectTo: 'page-not-found', pathMatch: 'full' },
+  { canActivate: [AuthGuard], path: '', component: LoginComponent },
+  {
+    canActivate: [AuthGuard],
+    path: 'customers',
+    component: CustomersComponent,
+  },
+  {
+    canActivate: [AuthGuard],
+    path: 'customers/new',
+    component: NewCustomerComponent,
+  },
+  {
+    canActivate: [AuthGuard],
+    path: 'customers/:id',
+    component: CustomerDetailsComponent,
+  },
+  {
+    canActivate: [AuthGuard],
+    path: 'customers/:id/edit',
+    component: CustomerEditComponent,
+  },
+  { canActivate: [AuthGuard], path: 'contacts', component: ContactsComponent },
+  {
+    canActivate: [AuthGuard],
+    path: 'page-not-found',
+    component: PageNotFoundComponent,
+  },
+  {
+    canActivate: [AuthGuard],
+    path: '**',
+    redirectTo: 'page-not-found',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

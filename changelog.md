@@ -1,3 +1,12 @@
+# Implement authentication and guards
+
+implement authentication service and guards
+
+- create a directive for google login
+- create a directive for logout
+- create guard for app
+- create login form
+
 # Create auth service
 
 Create an `auth.service` for user authentication and retrieving current user.

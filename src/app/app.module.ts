@@ -24,6 +24,8 @@ import { CustomerDetailsComponent } from './components/customer-details/customer
 import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { LoginComponent } from './components/login/login.component';
+import { LoginGoogleDirective } from './directives/login-google.directive';
+import { LogoutDirective } from './directives/logout.directive';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { LoginComponent } from './components/login/login.component';
     CustomerEditComponent,
     FilterArrayPipe,
     LoginComponent,
+    LoginGoogleDirective,
+    LogoutDirective,
   ],
   imports: [
     BrowserModule,
