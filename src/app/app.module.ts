@@ -23,6 +23,7 @@ import { FirebaseTutComponent } from './components/firebase-tut/firebase-tut.com
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { FilterArrayPipe } from './pipes/filter-array.pipe';
     CustomerDetailsComponent,
     CustomerEditComponent,
     FilterArrayPipe,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

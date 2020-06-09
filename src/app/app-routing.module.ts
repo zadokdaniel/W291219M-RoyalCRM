@@ -6,9 +6,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NewCustomerComponent } from './components/new-customer/new-customer.component';
 import { CustomerDetailsComponent } from './components/customer-details/customer-details.component';
 import { CustomerEditComponent } from './components/customer-edit/customer-edit.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'contacts', pathMatch: 'full' },
+  { path: '', component: LoginComponent },
   { path: 'customers', component: CustomersComponent },
   { path: 'customers/new', component: NewCustomerComponent },
   { path: 'customers/:id', component: CustomerDetailsComponent },

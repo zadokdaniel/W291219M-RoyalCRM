@@ -1,3 +1,7 @@
+# Create auth service
+
+Create an `auth.service` for user authentication and retrieving current user.
+
 # Add customers search box
 
 Add search box to customers page using pipes.

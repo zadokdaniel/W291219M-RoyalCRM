@@ -1,0 +1,17 @@
+<button (click)="authService.loginWithEmail('shalom@google.com', '123456')">
+  login
+</button>
+<button (click)="authService.loginWithGoogle()">google login</button>
+<button (click)="authService.logout()">logout</button>
+
+<h1>User Observable</h1>
+<pre>
+    {{ authService.user$ | async | json }}
+</pre>
+<h1>User</h1>
+<pre>
+    {{ authService.user | json }}
+</pre>
+
+<h1>isLogged</h1>
+isLogged {{ authService.isLogged }}
